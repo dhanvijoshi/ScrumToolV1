@@ -1,0 +1,25 @@
+<p>
+  user works!
+</p>
+<div class="table-responsive table-container">  
+  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"  class="row-border hover">
+          <thead>
+                  <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Delete</th>
+                  </tr>
+          </thead>
+  
+          <tbody>
+               <tr *ngFor="let user of users">
+                    <td>{{user.FirstName}}</td>
+                    <td>{{user.LastName}}</td>
+                    <td>
+                         <a (click)="deleteUser(user.Id,user.UserName)" class="text-danger">Delete</a> 
+                    </td>
+               </tr>
+          </tbody>
+  
+  </table>
+  </div>

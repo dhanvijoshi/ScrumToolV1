@@ -1,2 +1,2 @@
-# ScrumToolV1
-Scrum
+# ScrumToolV.1
+
