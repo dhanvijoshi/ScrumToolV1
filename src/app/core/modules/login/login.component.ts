@@ -45,6 +45,7 @@ export class LoginComponent implements OnInit {
     .pipe(first())
       .subscribe(
         (data : any)=>{
+          debugger;
           localStorage.setItem('userToken',data.access_token);
           this.router.navigate(['home']);
           })

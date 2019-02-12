@@ -16,6 +16,7 @@ export class JwtInterceptor implements HttpInterceptor { //this class will be in
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> { //inside this function we will append bearer access token to every request
         //and we will handle for not one unauthorised data score
         // add authorization header with jwt token if available
+        debugger;
         if(request.headers.get('No-Auth')=="True")
         return next.handle(request.clone());
 

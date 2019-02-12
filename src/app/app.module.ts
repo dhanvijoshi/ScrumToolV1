@@ -12,6 +12,8 @@ import { UserComponent } from './core/modules/user/user.component';
 import { HeaderComponent } from './core/modules/header/header.component';
 import { FooterComponent } from './core/modules/footer/footer.component';
 import { DataTablesModule } from 'angular-datatables';
+import { RegisterComponent } from './core/modules/register/register.component';
+import { AdduserComponent } from './core/modules/adduser/adduser.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { DataTablesModule } from 'angular-datatables';
     LoginComponent,
     UserComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    RegisterComponent,
+    AdduserComponent
   ],
   imports: [
     BrowserModule,

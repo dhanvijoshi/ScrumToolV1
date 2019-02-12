@@ -3,10 +3,24 @@
     <div class="login-form">
       <div class="main-div">
         <div class="panel">
-          <h2>Admin Login</h2>
-          <p>Please enter your username and password</p>
+          <h2>Register</h2>
         </div>
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" >
+
+          <div class="form-group">
+            <input formControlName="firstName" class="form-control" id="firstName" placeholder="First Name" type="text" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"/>
+            <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+              <div *ngIf="f.firstName.errors.required">First Name is required</div>
+          </div>
+          </div>
+
+          <div class="form-group">
+            <input formControlName="lastName" class="form-control" id="lastName" placeholder="Last Name" type="text" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }"/>
+            <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+              <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+          </div>
+          </div>
+
           <div class="form-group">
             <input formControlName="username" class="form-control" id="username" placeholder="User Name" type="text" [ngClass]="{ 'is-invalid': submitted && f.username.errors }"/>
             <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
@@ -20,15 +34,10 @@
               <div *ngIf="f.password.errors.required">Password is required</div>
           </div>
           </div>
-          <!-- <div class="forgot">
-            <a href="#">Forgot password?</a>
-          </div> -->
-          <button class="btn btn-primary" type="submit">Login</button>
-          <label>Not registered yet?</label>
-          <a routerLink= "register">Register Here</a>
+          <button class="btn btn-primary" type="submit">Register</button>
         </form>
       </div>
     </div>
   </div>
 </div>
-<!-- <p>{{loginform.value | json}}</p> -->
+

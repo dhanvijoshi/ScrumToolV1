@@ -19,4 +19,9 @@ export class UserService {
     return this.http.delete<User>(`${environment.apiUrl}/User/DeleteUserSessionAsync/${Id}?username=${UserName}`);
   }
 
+  register(user: User) {
+    debugger;
+    return this.http.post(`${environment.apiUrl}/Firm/SaveCompanyAsync`, user);
+}
+
 }

@@ -64,4 +64,11 @@ export class UserComponent implements OnInit {
         this.dtTrigger.next();
     });
   }
+  logout() {
+    this.authenticationService.logout();
+    this.router.navigate(['/login']);
+  }
+  add(){
+    this.router.navigate(['/adduser']);
+  }
 }
