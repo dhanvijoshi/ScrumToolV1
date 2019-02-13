@@ -18,7 +18,6 @@ canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):boolean  
     if (currentUser) {
       debugger;
         // authorised so return true
-        console.log('currentUser');
         return true;
     }        
 

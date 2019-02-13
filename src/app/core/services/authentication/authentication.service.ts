@@ -38,10 +38,6 @@ export class AuthenticationService {
            }));
   }
 
-  getAllUsersByFacility(id: number){
-    return this.http.get<any>(`${environment.apiUrl}/User/GetUsersByFacilityAsync/${id}`);
-  }
-
 logout() {
   debugger;
   // remove user from local storage to logout user
