@@ -33,7 +33,6 @@ export class AdduserComponent implements OnInit {
   get f() { return this.addForm.controls; }
 
   onSubmit() {
-    debugger;
     // stop here if form is invalid
     if (this.addForm.invalid) {
         return;
@@ -43,7 +42,6 @@ export class AdduserComponent implements OnInit {
         .pipe(first())
         .subscribe(
             (data : any) => {
-              debugger;
               console.log(data);
                 // this.alertService.success('Registration successful', true);
                 // this.router.navigate(['/login']);

@@ -27,7 +27,6 @@ export class AuthenticationService {
       var reqHeader = new HttpHeaders({'content-type':'application/x-www-form-urlencoded', 'No-Auth':'True'}); //there are some functions that do not need authorisation so we will by-pass those functions using property i.e.no-auth=true
       return this.http.post(`${environment.apiUrl}/authenticate` ,data, {headers: reqHeader})
       .pipe(map((user:any) =>{
-        debugger;
                // login successful if there's a jwt token in the response
                if (user && user.access_token) {
                    // store user details and jwt token in local storage to keep user logged in between page refreshes
@@ -39,7 +38,6 @@ export class AuthenticationService {
   }
 
 logout() {
-  debugger;
   // remove user from local storage to logout user
   localStorage.removeItem('currentUser');
   this.currentUserSubject.next(null);

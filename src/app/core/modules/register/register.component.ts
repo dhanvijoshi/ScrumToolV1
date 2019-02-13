@@ -41,7 +41,6 @@ export class RegisterComponent implements OnInit {
 
     onSubmit() {
         this.submitted = true;
-        debugger;
         // stop here if form is invalid
         if (this.registerForm.invalid) {
             return;
@@ -52,7 +51,6 @@ export class RegisterComponent implements OnInit {
             .pipe(first())
             .subscribe(
                 (data : any) => {
-                  debugger;
                     // this.alertService.success('Registration successful', true);
                     this.router.navigate(['/login']);
                 }
