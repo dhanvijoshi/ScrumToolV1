@@ -18,15 +18,12 @@ export class HomeComponent implements OnInit {
   constructor( private router: Router,
     private authenticationService: AuthenticationService ) { 
       this.currentUserSubscription = this.authenticationService.currentUser.subscribe(user => {
-        this.currentUser = user;
+      this.currentUser = user;
     });
     }
 
-  ngOnInit() {
-    debugger;
+  ngOnInit() {}
     
-  }
-
   user(){
     this.router.navigate(['/user']);
   }
