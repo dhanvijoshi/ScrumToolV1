@@ -6,4 +6,7 @@ export class User {
     lastName: string;
     token: string;
     access_token:string;
+    value: string;
+    viewValue: string;
+    layeron: boolean;
 }

@@ -8,6 +8,7 @@ import { AdduserModule } from '../adduser/adduser.module';
 import { DataTablesModule } from 'angular-datatables';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   declarations: [UserComponent],
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     DataTablesModule,
     AppRoutingModule, 
     HttpClientModule,
+    MaterialModule
   ],
   exports: [UserComponent]
 })

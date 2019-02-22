@@ -1,0 +1,9 @@
+<div>
+<div class="layerGroupings">
+ <div *ngFor="let layer of layers; let i = index">
+  <mat-slide-toggle [(ngModel)]="layeron[i]"></mat-slide-toggle> {{layer}} {{ layeron[i] }}
+ </div>
+</div>
+</div>
+
+

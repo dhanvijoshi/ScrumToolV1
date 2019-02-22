@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
     username: new FormControl(''),
     password: new FormControl('')
   })
+  loggedIn = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -38,8 +39,10 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     if (this.loginForm.invalid) {
       return;
+      this.loggedIn = false;
     }
   else{
+    this.loggedIn = true;
     console.log(this.loginForm.value);
     this.authenticationService.login(this.f.username.value, this.f.password.value)
     .pipe(first())
@@ -50,6 +53,5 @@ export class LoginComponent implements OnInit {
           })
           return;         
         }
-                
   }
 }

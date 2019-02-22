@@ -16,6 +16,7 @@ export class UserService {
   }
 
   delete(Id: string, UserName: string) {
+    debugger;
     return this.http.delete<User>(`${environment.apiUrl}/User/DeleteUserSessionAsync/${Id}?username=${UserName}`);
   }
 

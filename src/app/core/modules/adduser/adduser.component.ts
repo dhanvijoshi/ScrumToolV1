@@ -59,12 +59,11 @@ export class AdduserComponent implements OnInit {
           }
 
           handleFileInput(file : FileList){
-            this.fileToUpload = file.item(0);
-        
+            this.fileToUpload = file.item(0);       
             var  reader = new FileReader();
-            reader.onload=(event:any)=>{
-              this.imageUrl=event.target.result;
-            }
-            reader.readAsDataURL(this.fileToUpload);
+              reader.onload=(event:any)=>{
+                this.imageUrl=event.target.result;
+              }
+              reader.readAsDataURL(this.fileToUpload);
           }
 }

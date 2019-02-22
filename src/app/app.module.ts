@@ -14,11 +14,13 @@ import { HeaderModule } from './core/modules/header/header.module';
 import { HomeModule } from './core/modules/home/home.module';
 import { LoginModule } from './core/modules/login/login.module';
 import { RegisterModule } from './core/modules/register/register.module';
+import { MaterialModule } from './core/modules/material/material.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,8 @@ import { RegisterModule } from './core/modules/register/register.module';
     LoginModule,
     RegisterModule,
     UserModule,
+    MaterialModule,
+    
   ],
   exports:[
     AdduserModule,
@@ -42,7 +46,8 @@ import { RegisterModule } from './core/modules/register/register.module';
     HomeModule,
     LoginModule,
     RegisterModule,
-    UserModule
+    UserModule,
+    MaterialModule
   ],
   providers: [AuthGuard,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }

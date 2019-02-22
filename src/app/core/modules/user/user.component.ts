@@ -43,6 +43,7 @@ export class UserComponent implements OnInit {
   }
 
   deleteUser(Id: string, UserName: string) {
+    debugger;
     this.userService.delete(Id,UserName)
      .pipe(first())
         .subscribe(data => {
@@ -64,11 +65,16 @@ export class UserComponent implements OnInit {
         this.dtTrigger.next();
     });
   }
+
   logout() {
     this.authenticationService.logout();
     this.router.navigate(['/login']);
   }
+  
   add(){
     this.router.navigate(['/adduser']);
+  }
+  material(){
+    this.router.navigate(['/material']);
   }
 }

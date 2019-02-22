@@ -7,6 +7,8 @@ import { CommonModule } from '@angular/common';
 import { UserComponent } from './core/modules/user/user.component';
 import { RegisterComponent } from './core/modules/register/register.component';
 import { AdduserComponent } from './core/modules/adduser/adduser.component';
+import { MaterialComponent } from './core/modules/material/material.component';
+import { ToggleComponent } from './core/modules/toggle/toggle.component';
 
 export const routes: Routes = [
   {path:'', component:LoginComponent, pathMatch:'full'},
@@ -15,6 +17,8 @@ export const routes: Routes = [
   {path: 'user', component: UserComponent, canActivate:[AuthGuard]},
   {path: 'register', component: RegisterComponent},
   {path: 'adduser', component: AdduserComponent, canActivate:[AuthGuard]}, 
+  {path: 'material', component: MaterialComponent, canActivate:[AuthGuard]},
+  {path: 'toggle', component: ToggleComponent, canActivate:[AuthGuard]}
 ];
 
 @NgModule({
